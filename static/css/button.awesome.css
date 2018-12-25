@@ -1,0 +1,15 @@
+.awesome::after {
+    transition: 200ms ease-out;
+}
+
+.awesome:hover::after {
+    font-size: 3.8em;
+}
+
+.awesome.grin-stars::after {
+    content: "\f587";
+}
+
+.awesome.heart::after {
+    content: "\f004";
+}
