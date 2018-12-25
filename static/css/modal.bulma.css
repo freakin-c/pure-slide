@@ -10,6 +10,10 @@
         display: none;
     }
 
+    .modal-card-button.exit {
+        border: none;
+    }
+
     .modal-card {
         height: 100%;
     }
@@ -27,4 +31,39 @@
 .modal-card-foot {
     display: flex;
     justify-content: right;
+}
+
+/* Modal Card Buttons */
+
+.modal-card-button {
+    transition: 300ms ease;
+    border: 1px solid white;
+}
+
+.exit {
+    color: white;
+    background-color: transparent;
+}
+
+.exit:hover {
+    color: #537691;
+    background-color: white;
+}
+
+.next {
+    color:  #537691;
+    background-color: white;
+}
+
+.next:hover {
+    color: white;
+    background-color: transparent;
+}
+
+.next::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+
+    padding-left: 10px;
 }
