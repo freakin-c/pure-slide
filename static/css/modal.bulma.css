@@ -1,0 +1,30 @@
+.modal-card {
+    min-height: 45%;
+
+    background: transparent;
+    color: white;
+}
+
+@media (max-width:768px) {
+    .modal-exit-label {
+        display: none;
+    }
+
+    .modal-card {
+        height: 100%;
+    }
+}
+
+.modal-card > * {
+    border: none;
+    background-color: #537691;
+}
+
+.modal-card-title {
+    color: white;
+}
+
+.modal-card-foot {
+    display: flex;
+    justify-content: right;
+}
