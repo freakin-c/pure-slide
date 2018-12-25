@@ -15,6 +15,16 @@ function toggleModal() {
         document.removeEventListener("keydown", escapeModal)
 }
 
+// Iterate the Modal Cards
+function modalCardNextContent() {
+}
+
+// Count next card button *hovers*
+var countNextButtonHovers = 0
+function hoverCardNext( e ) {
+    console.log( "Hovered: #" + (++countNextButtonHovers) )
+}
+
 // Register EventListeners
 // -----------------------
 //
@@ -28,6 +38,11 @@ modalToggleButtons.forEach(
     function(currentValue, currentIndex, listObj) {
         listObj[currentIndex].addEventListener("click", toggleModal)
     })
+
+// Modal 'next' buttons to iterate the modal cards
+var modalCardNextButton = document.querySelector(".modal-card-button.next")
+modalCardNextButton.addEventListener("click", modalCardNextContent)
+modalCardNextButton.addEventListener("mouseenter", hoverCardNext)
 
 // Escape Key to close modal
 function escapeModal( e ) {
