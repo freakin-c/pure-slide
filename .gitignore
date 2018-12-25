@@ -1,2 +1,4 @@
 venv/
 static/css/bulma.min.css
+static/css/fontawesome.all.css
+static/webfonts/
