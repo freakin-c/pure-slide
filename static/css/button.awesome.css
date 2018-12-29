@@ -13,3 +13,15 @@
 .awesome.heart::after {
     content: "\f004";
 }
+
+.awesome.cannabis::after {
+    content: "\f55f";
+}
+
+.awesome.hand-peace::after {
+    content: "\f25b";
+}
+
+.awesome.dice-five::after {
+    content: "\f523";
+}
