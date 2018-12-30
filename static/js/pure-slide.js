@@ -1,6 +1,7 @@
 // Global Variables
 
 var modal = document.querySelector(".modal")
+var modalCard = modal.querySelector(".modal-card")
 
 var cardContents = null;
 var currentContentId = 0;
@@ -95,6 +96,9 @@ function setModalContent(contentId) {
             cardNextButton.classList.add( content.next.classes[i] )
         }
     }
+
+    // use css classes to set modal-card background color
+    modalCard.classList.add("color-" + contentId)
 }
 
 function cleanUpModalContent() {
@@ -104,6 +108,7 @@ function cleanUpModalContent() {
             cardNextButton.classList.remove(content.next.classes[i])
         }
     }
+    modalCard.classList.remove("color-" + currentContentId)
 }
 
 cardTitle = modal.querySelector('.modal-card-title')

@@ -20,6 +20,7 @@ a.external:hover::after {
 
 .modal-card {
     min-height: 45%;
+    height: 560px;
 
     background: transparent;
     color: white;
@@ -35,13 +36,14 @@ a.external:hover::after {
     }
 
     .modal-card {
-        height: 100%;
+        max-height: 640px;
     }
 }
 
 .modal-card > * {
     border: none;
     background-color: #537691;
+    transition: background-color 600ms ease-out;
 }
 
 .modal-card-title {
@@ -86,6 +88,24 @@ a.external:hover::after {
     content: "\f105";
 
     padding-left: 10px;
+}
+
+/* colors */
+
+.color-0 > * {
+    background-color: #537691;
+}
+
+.color-1 > * {
+    background-color: #88afdd;
+}
+
+.color-2 > * {
+    background-color: #6b969d;
+}
+
+.color-3 > * {
+    background-color: #8ab186;
 }
 
 .modal-card-body .box pre {
