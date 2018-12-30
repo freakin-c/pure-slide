@@ -16,7 +16,8 @@ function toggleModal() {
 }
 
 // Iterate the Modal Cards
-function modalCardNextContent() {
+function iterateCardContent(forward = true) {
+
 }
 
 // Count next card button *hovers*
@@ -41,7 +42,7 @@ modalToggleButtons.forEach(
 
 // Modal 'next' buttons to iterate the modal cards
 var modalCardNextButton = document.querySelector(".modal-card-button.next")
-modalCardNextButton.addEventListener("click", modalCardNextContent)
+modalCardNextButton.addEventListener("click", iterateCardContent)
 modalCardNextButton.addEventListener("mouseenter", hoverCardNext)
 
 // Escape Key to close modal
