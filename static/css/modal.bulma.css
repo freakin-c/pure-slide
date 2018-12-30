@@ -1,3 +1,23 @@
+.modal-card-body a {
+    color: white;
+}
+
+a.external {
+    text-decoration: underline;
+}
+
+a.external:hover {
+    text-decoration: none;
+}
+
+a.external:hover::after {
+    padding-left: 4px;
+
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f360";
+}
+
 .modal-card {
     min-height: 45%;
 
@@ -66,4 +86,9 @@
     content: "\f105";
 
     padding-left: 10px;
+}
+
+.modal-card-body .box pre {
+    background-color: white;
+    padding: 0;
 }
