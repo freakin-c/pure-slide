@@ -95,3 +95,13 @@ cardTitle = modal.querySelector('.modal-card-title')
 cardLead = modal.querySelector('.modal-card-body .lead')
 cardBodyContent = modal.querySelector('.modal-card-body p')
 cardNextButton = modal.querySelector('.modal-card-foot .button')
+
+function pullContent( url ) {
+    json = fetch(url).then(function(response){
+        return(response.json());
+    }).then(function(response){
+        cardContents = response
+        setModalContent(0)
+    })
+}
+pullContent("/content/cards.json");

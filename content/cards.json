@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Getting Started with <b>Pure Slide</b>",
+        "lead": "Enjoy a keyboard ready slideshow",
+        "body": [
+            "with content strictly separated from markup and code.",
+            "<b>Pure Slide</b> is for you,",
+            "if you like to have it",
+            "<br>",
+            "<ul>",
+            "<li>load your content from JSON</li>",
+            "<li>configured easily</li>",
+            "<li>arrowkey navigated</li>",
+            "<li>compliant with <a target=\"_blank\" class=\"external\" href=\"https://en.wikipedia.org/wiki/Vim_(text_editor)\">vim</a></li>",
+            "</ul>",
+            "It's built with",
+            "<ul>",
+            "<li><a target=\"_blank\" class=\"external\" href=\"https://bulma.io/\">Bulma CSS Framework</a></li>",
+            "<li>Vanilla JS</li>",
+            "</ul>"
+        ],
+        "next": {
+            "label": "I'm excited",
+            "classes": ["awesome", "grin-stars"]
+        }
+    },
+    {
+        "title": "Integrate in your site",
+        "lead": "Simply provide a URL to your JSON file",
+        "body": [
+            "and load the pure-slide.js in your HTML header.",
+            "<br><br>",
+            "<div class=\"box\"><pre>",
+            "&lt;script",
+            "    src=\"/static/js/pure-slide.js",
+            "    type=\"text/javascript\" async\"&gt;",
+            "&lt;/script&gt;",
+            "&lt;script&gt;",
+            "    var pureSlideContentURL = 'https://url.to/your/content.json';",
+            "&lt;/script&gt;",
+            "</pre></div>"
+        ],
+        "next": {
+            "label": "Dat easy"
+        }
+    },
+    {
+        "title": "Prepare your own content",
+        "lead": "Just make a suitable JSON file available online",
+        "body": [
+            "and thus easily separate your content from the markup and code.",
+            "The JSON consists of an array of one object for each card.",
+            "As simple as that:",
+            "<br><br>",
+            "<div class=\"box\"><pre>",
+            "[",
+            "    { ... },",
+            "    {",
+            "        \"title\":  \"Prepare your own content\",",
+            "        \"lead\":   \"Simply provide a URL ...\",",
+            "        \"body\": [ \"and easily separate ...\",",
+            "                  \"The JSON consists of ...\" ],",
+            "        \"next\": { \"label\": \"Dope\"",
+            "                  \"classes\": [\"awesome\", \"cannabis\"] }",
+            "    }",
+            "]",
+            "</pre></div>"
+        ],
+        "next": {
+            "label": "Dope",
+            "classes": ["awesome", "cannabis"]
+        }
+    }
+]
