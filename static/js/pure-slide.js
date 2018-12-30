@@ -124,4 +124,10 @@ function pullContent( url ) {
         setModalContent(0)
     })
 }
-pullContent("/content/cards.json");
+
+try {
+    pullContent(pureSlideContentURL)
+} catch ( e ) {
+    pullContent("/content/cards.json");
+    console.log("Define and assign the variable `pureSlideContentURL` in your HTML document.")
+}
