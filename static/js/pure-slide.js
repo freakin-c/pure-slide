@@ -2,12 +2,20 @@
 
 var modal = document.querySelector(".modal")
 
+var cardContents = null;
+var currentContentId = 0;
+
 // EventListeners
 // --------------
 
 // Toggle the Modal
 function toggleModal() {
     modal.classList.toggle("is-active")
+
+    if (modal.classList.contains("is-active")) {
+        cleanUpModalContent()
+        setModalContent(0)
+    }
 
     // toggle  `keydown` eventListener alongside with modal
     modal.classList.contains("is-active") ?
@@ -53,3 +61,37 @@ function escapeModal( e ) {
     }
 }
 document.addEventListener("keydown", escapeModal)
+
+// Modal Content
+//
+function setModalContent(contentId) {
+    if ( currentContentId !== contentId ){
+        currentContentId = contentId
+    }
+
+    content = cardContents[contentId]
+    cardTitle.innerHTML = content.title
+    cardLead.innerHTML = content.lead
+    cardBodyContent.innerHTML = content.body.join('\n')
+    cardNextButton.innerHTML = content.next.label
+
+    if ( content.next.classes ) {
+        for ( var i = 0; i < content.next.classes.length; i++ ) {
+            cardNextButton.classList.add( content.next.classes[i] )
+        }
+    }
+}
+
+function cleanUpModalContent() {
+    content = cardContents[currentContentId]
+    if ( content.next.classes ){
+        for ( var i = 0; i < content.next.classes.length; i++ ) {
+            cardNextButton.classList.remove(content.next.classes[i])
+        }
+    }
+}
+
+cardTitle = modal.querySelector('.modal-card-title')
+cardLead = modal.querySelector('.modal-card-body .lead')
+cardBodyContent = modal.querySelector('.modal-card-body p')
+cardNextButton = modal.querySelector('.modal-card-foot .button')
