@@ -20,8 +20,8 @@ function toggleModal() {
 
     // toggle  `keydown` eventListener alongside with modal
     modal.classList.contains("is-active") ?
-        document.addEventListener("keydown", escapeModal) :
-        document.removeEventListener("keydown", escapeModal)
+        document.addEventListener("keydown", keyboardNavigation) :
+        document.removeEventListener("keydown", keyboardNavigation)
 }
 
 // Iterate the Modal Cards
@@ -70,13 +70,17 @@ modalCardNextButton.addEventListener("click", iterateCardContent)
 modalCardNextButton.addEventListener("mouseenter", hoverCardNext)
 
 // Escape Key to close modal
-function escapeModal( e ) {
-    if ( modal.classList.contains("is-active") && e.key === "Escape" ) {
-        console.log( "Active modal escaped" )
+function keyboardNavigation( e ) {
+    if ( e.key === "ArrowRight" || e.key === "l" ) {
+        iterateCardContent()
+    } else if ( e.key === "ArrowLeft" || e.key === "h" ) {
+        iterateCardContent(false)
+    } else if ( ( e.key === "Escape" || e.key === "q" )
+        && modal.classList.contains("is-active") ) {
         toggleModal()
     }
 }
-document.addEventListener("keydown", escapeModal)
+document.addEventListener("keydown", keyboardNavigation)
 
 // Modal Content
 //
