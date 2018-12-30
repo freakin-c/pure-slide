@@ -25,6 +25,21 @@ function toggleModal() {
 
 // Iterate the Modal Cards
 function iterateCardContent(forward = true) {
+    cleanUpModalContent()
+
+    var nextContent = currentContentId
+    forward ? nextContent++ : nextContent--
+
+    if ( nextContent === cardContents.length ){
+        toggleModal()
+        return
+    }
+
+    if ( nextContent < 0 ) {
+        nextContent += cardContents.length
+    }
+
+    setModalContent(nextContent)
 
 }
 
