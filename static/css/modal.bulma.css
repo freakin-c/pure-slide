@@ -1,3 +1,16 @@
+.modal {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition:visibility 100ms linear,
+               opacity 100ms linear;
+}
+
+.modal.is-active {
+    visibility: visible;
+    opacity: 1;
+}
+
 .modal-card-body a {
     color: white;
 }
